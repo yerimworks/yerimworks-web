@@ -178,6 +178,7 @@
       border: 1px solid var(--border); box-shadow: none;
     }
     .buy[data-pending="true"]:hover { transform: none; background: rgba(255,255,255,0.05); }
+    .paypal-container { min-height: 45px; }
 
     /* ── SHARED POLICY ── */
     .policy {
@@ -268,6 +269,7 @@
       </details>
       <div class="svc-foot">
         <div class="svc-price"><span class="now">$13,500</span><span class="was">$15,000</span><span class="save">Save $1,500</span></div>
+        <div class="paypal-container" id="ppc-YRS-0000"></div>
         <a class="buy" data-paypal="YRS-0000" href="#">Buy with PayPal</a>
       </div>
     </div>
@@ -304,6 +306,7 @@
       </details>
       <div class="svc-foot">
         <div class="svc-price"><span class="now">$9,000</span><span class="was">$15,000</span><span class="save">Save $6,000</span></div>
+        <div class="paypal-container" id="ppc-YRS-0001"></div>
         <a class="buy" data-paypal="YRS-0001" href="#">Buy with PayPal</a>
       </div>
     </div>
@@ -340,6 +343,7 @@
       </details>
       <div class="svc-foot">
         <div class="svc-price"><span class="now">$8,500</span><span class="was">$13,000</span><span class="save">Save $4,500</span></div>
+        <div class="paypal-container" id="ppc-YRS-0002"></div>
         <a class="buy" data-paypal="YRS-0002" href="#">Buy with PayPal</a>
       </div>
     </div>
@@ -376,6 +380,7 @@
       </details>
       <div class="svc-foot">
         <div class="svc-price"><span class="now">$10,500</span><span class="was">$15,000</span><span class="save">Save $4,500</span></div>
+        <div class="paypal-container" id="ppc-YRS-0003"></div>
         <a class="buy" data-paypal="YRS-0003" href="#">Buy with PayPal</a>
       </div>
     </div>
@@ -410,6 +415,7 @@
       </details>
       <div class="svc-foot">
         <div class="svc-price"><span class="now">$5,000</span><span class="was">$7,000</span><span class="save">Save $2,000</span></div>
+        <div class="paypal-container" id="ppc-YRS-0004"></div>
         <a class="buy" data-paypal="YRS-0004" href="#">Buy with PayPal</a>
       </div>
     </div>
@@ -446,6 +452,7 @@
       </details>
       <div class="svc-foot">
         <div class="svc-price"><span class="now">$12,000</span><span class="was">$15,000</span><span class="save">Save $3,000</span></div>
+        <div class="paypal-container" id="ppc-YRS-0005"></div>
         <a class="buy" data-paypal="YRS-0005" href="#">Buy with PayPal</a>
       </div>
     </div>
@@ -482,6 +489,7 @@
       </details>
       <div class="svc-foot">
         <div class="svc-price"><span class="now">$11,000</span><span class="was">$15,000</span><span class="save">Save $4,000</span></div>
+        <div class="paypal-container" id="ppc-YRS-0006"></div>
         <a class="buy" data-paypal="YRS-0006" href="#">Buy with PayPal</a>
       </div>
     </div>
@@ -518,6 +526,7 @@
       </details>
       <div class="svc-foot">
         <div class="svc-price"><span class="now">$6,000</span><span class="was">$8,500</span><span class="save">Save $2,500</span></div>
+        <div class="paypal-container" id="ppc-YRS-0007"></div>
         <a class="buy" data-paypal="YRS-0007" href="#">Buy with PayPal</a>
       </div>
     </div>
@@ -550,39 +559,62 @@
 
 <script>
   /*
-   * PayPal Payment Links
-   * ────────────────────
-   * 1. PayPal 비즈니스 계정 → "결제 링크 및 버튼"(Pay Links & Buttons) 또는 인보이스로
-   *    각 서비스의 결제 링크(https://www.paypal.com/... 또는 https://paypal.me/...)를 생성.
-   * 2. 생성한 링크를 아래 SKU 옆에 그대로 붙여넣기.
-   * 3. 비워 두면 그 버튼은 자동으로 "Request a quote"(이메일 문의)로 표시되어 안전합니다.
+   * PayPal Hosted Buttons
+   * ─────────────────────
+   * 1. PayPal 비즈니스 → "결제 링크 및 버튼 생성"에서 각 서비스 버튼을 만들면
+   *    코드 스니펫에 hostedButtonId: "XXXXXXXX" 값이 나옵니다.
+   * 2. 그 hostedButtonId 값을 아래 해당 SKU 옆에 그대로 붙여넣기.
+   * 3. 비워 두면 그 카드는 자동으로 "Request a quote"(이메일 문의)로 표시됩니다.
+   * 통화는 USD, client-id 는 본 계정 값으로 고정되어 있습니다.
    */
-  const PAYPAL_LINKS = {
-    'YRS-0000': '', // New App Development
-    'YRS-0001': '', // App Data Migration & Redesign
-    'YRS-0002': '', // New App Graphic Design
-    'YRS-0003': '', // Legacy App Recovery & Re-Development
-    'YRS-0004': '', // App Maintenance & Update Service
-    'YRS-0005': '', // CI & Logo Design Improvement
-    'YRS-0006': '', // App Code Review & Enhancement
-    'YRS-0007': '', // Mobile Website Creation
+  const PAYPAL_CLIENT_ID = 'BAA19PT9_iBF-DGmY-gLsrPMTgoMcfO2tOHuzs3o23GUlfPkJspeMOxhJPGcEi_wynIpR9U9pJDhejApmE';
+
+  const PAYPAL_BUTTONS = {
+    'YRS-0000': 'SNFN4X4ZTTAFC', // New App Development
+    'YRS-0001': 'BY6SX94JE4B76', // App Data Migration & Redesign
+    'YRS-0002': 'SMMB7SS5FXJAL', // New App Graphic Design
+    'YRS-0003': '3RNRPT7QUTWNJ', // Legacy App Recovery & Re-Development
+    'YRS-0004': '896GRMR5FMRWQ', // App Maintenance & Update Service
+    'YRS-0005': 'HV9X3G8HXA3WU', // CI & Logo Design Improvement
+    'YRS-0006': 'XYDJ39VUN6P24', // App Code Review & Enhancement
+    'YRS-0007': 'YVBAJ5KC7SLU8', // Mobile Website Creation
   };
 
-  document.querySelectorAll('.buy[data-paypal]').forEach(function (btn) {
-    const sku = btn.dataset.paypal;
-    const url = PAYPAL_LINKS[sku];
-    if (url) {
-      btn.href = url;
-      btn.target = '_blank';
-      btn.rel = 'noopener';
-    } else {
-      const name = btn.closest('.svc')?.querySelector('h2')?.textContent || 'Software Service';
-      btn.href = 'mailto:teamsoft@yerimworks.com?subject=' +
-        encodeURIComponent('Inquiry: ' + name + ' (' + sku + ')');
-      btn.dataset.pending = 'true';
-      btn.textContent = 'Request a quote';
-    }
-  });
+  (function () {
+    // 호스팅 버튼 ID가 있으면 커스텀 버튼 숨김, 없으면 이메일 견적 문의로 폴백
+    document.querySelectorAll('.buy[data-paypal]').forEach(function (btn) {
+      const sku = btn.dataset.paypal;
+      const container = document.getElementById('ppc-' + sku);
+      if (PAYPAL_BUTTONS[sku]) {
+        btn.style.display = 'none';
+      } else {
+        if (container) container.style.display = 'none';
+        const name = btn.closest('.svc')?.querySelector('h2')?.textContent || 'Software Service';
+        btn.href = 'mailto:teamsoft@yerimworks.com?subject=' +
+          encodeURIComponent('Inquiry: ' + name + ' (' + sku + ')');
+        btn.dataset.pending = 'true';
+        btn.textContent = 'Request a quote';
+      }
+    });
+
+    const ready = Object.entries(PAYPAL_BUTTONS).filter(function (e) { return e[1]; });
+    if (!ready.length) return; // 아직 호스팅 버튼이 없으면 SDK 로드 안 함
+
+    const s = document.createElement('script');
+    s.src = 'https://www.paypal.com/sdk/js?client-id=' + PAYPAL_CLIENT_ID +
+      '&components=hosted-buttons&disable-funding=venmo&currency=USD';
+    s.onload = function () {
+      ready.forEach(function (e) {
+        const sku = e[0], hostedButtonId = e[1];
+        try {
+          paypal.HostedButtons({ hostedButtonId: hostedButtonId }).render('#ppc-' + sku);
+        } catch (err) {
+          console.error('PayPal render failed for', sku, err);
+        }
+      });
+    };
+    document.head.appendChild(s);
+  })();
 </script>
 
 </body>
