@@ -239,21 +239,6 @@
 <!-- CATALOG -->
 <main class="catalog">
 
-  <!-- ===== DUMMY TEST BUTTON — 결제 테스트용. 확인 후 이 article 과 PAYPAL_BUTTONS의 YRS-TEST 줄을 삭제하세요. ===== -->
-  <article class="svc">
-    <img class="svc-img" src="images/new_app_devel.png" alt="Dummy Test Button" loading="lazy">
-    <div class="svc-body">
-      <div class="svc-sku">YRS-TEST</div>
-      <h2>Dummy Test 2 Button</h2>
-      <p class="svc-intro">Temporary $16 product used only to verify that PayPal checkout works end-to-end. Remove after testing.</p>
-      <div class="svc-foot">
-        <div class="svc-price"><span class="now">$16</span></div>
-        <div class="paypal-container" id="ppc-YRS-TEST"></div>
-        <a class="buy" data-paypal="YRS-TEST" href="#">Buy with PayPal</a>
-      </div>
-    </div>
-  </article>
-
   <!-- YRS-0000 -->
   <article class="svc">
     <img class="svc-img" src="images/new_app_devel.png" alt="New App Development" loading="lazy">
@@ -585,7 +570,6 @@
   const PAYPAL_CLIENT_ID = 'BAA19PT9_iBF-DGmY-gLsrPMTgoMcfO2tOHuzs3o23GUlfPkJspeMOxhJPGcEi_wynIpR9U9pJDhejApmE';
 
   const PAYPAL_BUTTONS = {
-    'YRS-TEST': 'V4LMLYXH9UQ3G', // Dummy Test Button ($15) — 테스트 후 삭제
     'YRS-0000': 'SNFN4X4ZTTAFC', // New App Development
     'YRS-0001': 'BY6SX94JE4B76', // App Data Migration & Redesign
     'YRS-0002': 'SMMB7SS5FXJAL', // New App Graphic Design
