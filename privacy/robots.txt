@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /privacy-policy-woorimal.html
+Disallow: /privacy-policy-shalom-tanach.html
