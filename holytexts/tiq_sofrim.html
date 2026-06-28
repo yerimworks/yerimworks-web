@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tiqqunei Sopherim · 창세기 18:22 — Temimah</title>
+<meta name="description" content="티쿠네이 소페림(서기관들의 티쿤·완곡 교정) 연구 — 창세기 18:22. 마소라 본문과 원형 재구성, 랍비 증언, 고대 역본. Temimah, a Holy Texts studio of Yerim Works." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Noto+Serif+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink:        #0b0f1a;
+    --ink-soft:   #141a2b;
+    --gold:       #c8a24a;
+    --gold-soft:  #e3c97f;
+    --gold-deep:  #8a6d2a;
+    --violet:     #4b3b6b;
+    --parchment:  #faf7f0;
+    --card:       #ffffff;
+    --line:       #e7e0d2;
+    --text:       #20242e;
+    --text-soft:  #5a6072;
+    --he-serif:   'Frank Ruhl Libre', 'Times New Roman', serif;
+    --en-serif:   'EB Garamond', Georgia, serif;
+    --ko-serif:   'Noto Serif KR', serif;
+    --pro:        #1f7a4d;
+    --tikkun:     #b07a16;
+    --none:       #8b8f9a;
+    --ketiv:      #b23b3b;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--parchment);
+    color: var(--text);
+    font-family: var(--ko-serif);
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ===== Top brand bar ===== */
+  .topbar {
+    background: var(--ink);
+    color: #d9dce6;
+    font-size: .8rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    padding: .6rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(200,162,74,.25);
+  }
+  .topbar .he { font-family: var(--he-serif); font-size: 1.05rem; letter-spacing: 0; color: var(--gold-soft); }
+  .topbar a { color: var(--gold-soft); text-decoration: none; }
+
+  /* ===== Hero ===== */
+  .hero {
+    background:
+      radial-gradient(120% 140% at 50% -20%, rgba(75,59,107,.55), transparent 60%),
+      linear-gradient(180deg, var(--ink) 0%, var(--ink-soft) 100%);
+    color: #f3efe4;
+    text-align: center;
+    padding: 4.5rem 1.5rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: "";
+    position: absolute; left: 0; right: 0; bottom: 0; height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+  .hero .eyebrow {
+    font-family: var(--en-serif);
+    letter-spacing: .35em;
+    text-transform: uppercase;
+    font-size: .82rem;
+    color: var(--gold-soft);
+    margin-bottom: 1.4rem;
+  }
+  .hero h1 {
+    font-family: var(--en-serif);
+    font-weight: 600;
+    font-size: clamp(2.1rem, 5vw, 3.4rem);
+    margin: 0 0 .4rem;
+    letter-spacing: .01em;
+  }
+  .hero .he-verse {
+    font-family: var(--he-serif);
+    direction: rtl;
+    font-size: clamp(1.6rem, 4.5vw, 2.6rem);
+    font-weight: 500;
+    color: #fff;
+    margin: 1.6rem auto .6rem;
+    max-width: 30ch;
+    line-height: 1.6;
+  }
+  .hero .ref {
+    font-family: var(--en-serif);
+    font-style: italic;
+    color: #c6cbd9;
+    font-size: 1.05rem;
+  }
+  .hero .ref a { color: var(--gold-soft); text-decoration: none; border-bottom: 1px solid rgba(227,201,127,.4); }
+  .hero .motto {
+    margin-top: 2.2rem;
+    font-family: var(--en-serif);
+    font-style: italic;
+    color: #aeb4c4;
+    font-size: 1rem;
+  }
+  .hero .motto .he { font-family: var(--he-serif); font-style: normal; color: var(--gold-soft); }
+
+  /* ===== Layout ===== */
+  main {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem 5rem;
+  }
+
+  section { margin-bottom: 4rem; }
+
+  .sec-head {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    border-bottom: 2px solid var(--line);
+    padding-bottom: .7rem;
+    margin-bottom: 1.8rem;
+  }
+  .sec-head h2 {
+    font-family: var(--en-serif);
+    font-weight: 600;
+    font-size: 1.7rem;
+    margin: 0;
+    color: var(--ink);
+  }
+  .sec-head .he {
+    font-family: var(--he-serif);
+    direction: rtl;
+    color: var(--gold-deep);
+    font-size: 1.4rem;
+  }
+  .sec-head .num {
+    font-family: var(--en-serif);
+    color: var(--gold);
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  .lead {
+    font-size: 1.05rem;
+    color: var(--text-soft);
+    max-width: 70ch;
+    margin: 0 0 1.5rem;
+  }
+
+  /* ===== Verse card ===== */
+  .verse-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 2rem 2.2rem;
+    box-shadow: 0 10px 30px -22px rgba(11,15,26,.4);
+    margin-bottom: 1.5rem;
+  }
+  .verse-card .label {
+    font-family: var(--en-serif);
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    font-size: .75rem;
+    color: var(--gold-deep);
+    margin-bottom: .6rem;
+  }
+  .verse-card .he {
+    font-family: var(--he-serif);
+    direction: rtl;
+    font-size: 1.9rem;
+    line-height: 1.7;
+    color: var(--ink);
+  }
+  .verse-card .keys {
+    margin-top: 1rem;
+    font-family: var(--he-serif);
+    direction: rtl;
+    font-size: 1.05rem;
+    color: var(--text-soft);
+  }
+  .verse-card .keys .lbl { font-family: var(--ko-serif); color: var(--gold-deep); font-size: .8rem; letter-spacing:.1em; direction:ltr; display:inline-block; margin-bottom:.2rem;}
+
+  /* ===== Tables ===== */
+  .table-wrap { overflow-x: auto; border-radius: 12px; border: 1px solid var(--line); background: var(--card); }
+  table { border-collapse: collapse; width: 100%; font-size: .92rem; min-width: 760px; }
+  thead th {
+    background: var(--ink);
+    color: var(--gold-soft);
+    font-family: var(--en-serif);
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-align: left;
+    padding: .85rem 1rem;
+    position: sticky; top: 0;
+  }
+  tbody td {
+    padding: .9rem 1rem;
+    border-top: 1px solid var(--line);
+    vertical-align: top;
+  }
+  tbody tr:nth-child(even) { background: #fcfaf4; }
+  td.he { font-family: var(--he-serif); direction: rtl; text-align: right; font-size: 1.05rem; line-height: 1.7; }
+  td.he b { color: var(--ketiv); }
+  td.auth { font-family: var(--en-serif); font-weight: 600; white-space: nowrap; }
+  td.auth a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--gold); }
+  td.auth a:hover { color: var(--gold-deep); }
+  td.auth .ext { color: var(--gold); font-size: .8em; }
+  td.muted, .muted { color: var(--none); font-style: italic; }
+
+  .badge {
+    display: inline-block;
+    font-family: var(--en-serif);
+    font-size: .72rem;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    padding: .18rem .6rem;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .b-tikkun { background: rgba(176,122,22,.12); color: var(--tikkun); border: 1px solid rgba(176,122,22,.3); }
+  .b-none   { background: rgba(139,143,154,.12);color: var(--none);   border: 1px solid rgba(139,143,154,.3); }
+  .b-ketiv  { background: rgba(178,59,59,.1);   color: var(--ketiv);  border: 1px solid rgba(178,59,59,.3); }
+  .b-acad   { background: rgba(75,59,107,.1);   color: var(--violet); border: 1px solid rgba(75,59,107,.3); }
+
+  /* verdict dots for versions */
+  .dot { font-size: .9em; }
+
+  /* ===== Callout ===== */
+  .callout {
+    background: linear-gradient(180deg, #fff 0%, #fcf8ee 100%);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--gold);
+    border-radius: 10px;
+    padding: 1.4rem 1.6rem;
+    margin: 1.5rem 0;
+  }
+  .callout .he { font-family: var(--he-serif); direction: rtl; color: var(--ink); }
+
+  /* ===== Series index ===== */
+  .idx-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: .8rem; margin-top: 1.2rem; }
+  .idx-card { display: block; text-decoration: none; border: 1px solid var(--line); border-radius: 10px; padding: .9rem 1rem; background: #fff; transition: .18s ease; position: relative; }
+  a.idx-card:hover { border-color: var(--gold); box-shadow: 0 4px 16px rgba(176,122,22,.12); transform: translateY(-2px); }
+  .idx-card .idx-num { font-family: var(--en-serif); font-size: .72rem; color: var(--gold-deep); letter-spacing: .1em; }
+  .idx-card .idx-ref { font-family: var(--ko-serif); color: var(--ink); font-weight: 600; margin: .15rem 0 .1rem; }
+  .idx-card .idx-he { font-family: var(--he-serif); direction: rtl; color: var(--text-soft); font-size: .95rem; }
+  .idx-card.current { border-color: var(--gold); background: #fcf8ee; }
+  .idx-card.locked { background: #faf8f2; opacity: .72; cursor: default; }
+  .idx-card.locked .idx-ref { color: var(--none); font-weight: 500; }
+  .idx-tag { font-family: var(--en-serif); font-size: .6rem; text-transform: uppercase; letter-spacing: .1em; border-radius: 999px; padding: .12rem .45rem; position: absolute; top: .7rem; right: .7rem; }
+  .idx-tag.now  { color: var(--gold-deep); border: 1px solid rgba(176,122,22,.35); background: rgba(176,122,22,.1); }
+  .idx-tag.soon { color: var(--none); border: 1px solid rgba(139,143,154,.3); }
+
+  /* ===== Footer ===== */
+  footer {
+    background: var(--ink);
+    color: #aeb4c4;
+    padding: 3rem 1.5rem 2.4rem;
+    font-size: .9rem;
+  }
+  footer .inner { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 2rem; }
+  footer h4 { font-family: var(--en-serif); color: var(--gold-soft); letter-spacing: .12em; text-transform: uppercase; font-size: .8rem; margin: 0 0 .9rem; }
+  footer a { color: #c6cbd9; text-decoration: none; display: block; margin-bottom: .35rem; }
+  footer a:hover { color: var(--gold-soft); }
+  footer .brand-he { font-family: var(--he-serif); color: var(--gold-soft); font-size: 1.3rem; }
+  footer .legal { max-width: 1180px; margin: 2.2rem auto 0; padding-top: 1.4rem; border-top: 1px solid rgba(200,162,74,.2); font-size: .8rem; color: #7e8499; line-height: 1.7; }
+  footer .legal a { display: inline; color: var(--gold-soft); }
+
+  @media (max-width: 760px) {
+    footer .inner { grid-template-columns: 1fr; }
+    .verse-card { padding: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span>Temimah · Holy Texts Studio</span>
+  <span class="he">תְּמִימָה</span>
+  <span><a href="https://yerimworks.com/#holy-texts">Yerim Works ↗</a></span>
+</div>
+
+<header class="hero">
+  <div class="eyebrow">Tiqqunei Sopherim · 서기관들의 티쿤</div>
+  <h1>The Scribes&rsquo; Emendations</h1>
+  <div class="he-verse">וְאַבְרָהָם עוֹדֶנּוּ עֹמֵד לִפְנֵי יְהוָה</div>
+  <div class="ref">Genesis 18:22 ·
+    <a href="https://www.sefaria.org/Genesis.18.22" target="_blank" rel="noopener">창세기 18:22 원문 보기 ↗</a>
+  </div>
+  <div class="motto">
+    &ldquo;letter by letter, yod by stroke&rdquo; —
+    <span class="he">תּוֹרַת יְהוָה תְּמִימָה</span> · Psalm 19:8
+  </div>
+</header>
+
+<main>
+
+  <!-- INTRO -->
+  <section id="intro">
+    <div class="sec-head">
+      <span class="num">01</span>
+      <h2>이 본문은 무엇인가</h2>
+      <span class="he">תִּקּוּן סוֹפְרִים</span>
+    </div>
+    <p class="lead">
+      <strong>티쿤 소페림(Tiqqun Soferim, 서기관들의 티쿤)</strong>은 고대 랍비 전통이
+      토라·예언서 안의 18개 구절에 대해 &ldquo;원래 표현이 하나님께 무엄하게 비칠 수 있어
+      서기관들이 경건하게 표현을 바꾸어 적었다&rdquo;고 증언하는 자리들입니다.
+      창세기 18:22은 그 <em>대표적인 첫 사례</em>로, 전통은 원형이
+      &ldquo;<span style="font-family:var(--he-serif)">וַיהוָה עוֹדֶנּוּ עֹמֵד לִפְנֵי אַבְרָהָם</span>
+      (주님께서 아브라함 앞에 여전히 서 계셨다)&rdquo;였다고 전합니다.
+    </p>
+
+    <div class="verse-card">
+      <div class="label">Masoretic Text (MT)</div>
+      <div class="he">וְאַבְרָהָם עוֹדֶנּוּ עֹמֵד לִפְנֵי יְהוָה׃</div>
+      <div class="keys">
+        <span class="lbl">검색키 (search keys)</span><br />
+        ואברהם עודנו · עודנו עמד · עודנו עומד
+      </div>
+    </div>
+
+    <div class="callout">
+      <div style="margin-bottom:.55rem"><strong>용어 노트 — &lsquo;티쿤(תיקון, tiqqun)&rsquo;의 이중 의미</strong></div>
+      <p style="margin:0;color:var(--text-soft);font-size:.97rem;line-height:1.85">
+        티쿤은 어근 <span class="he">ק־ן</span>(&lsquo;바로 세우다·고치다&rsquo;)에서 온 말로, 흔히 &lsquo;회복&rsquo;으로 옮기지만
+        이 문맥에서는 두 방향이 한 단어에 겹쳐 있어 그대로 &lsquo;회복&rsquo;이라 번역하면 정반대로 오해됩니다.
+        <br />① <strong>행위로서의 티쿤</strong> — 서기관들이 무엄해 보이는 표현을 경외심에서 <em>완곡하게 고쳐 적은</em> 그 손길(예: &ldquo;이것은 <span class="he">תיקון סופרים</span>이다&rdquo;).
+        <br />② <strong>원형으로서의 티쿤</strong> — 그 고침을 <em>되돌려야 할 본래의 올바른 본문</em>(예: <span class="he">כְּתִיקּוּנָם</span> &ldquo;그 티쿤대로&rdquo;).
+        <br />그래서 본 페이지는 tikkun을 &lsquo;회복&rsquo;·&lsquo;수정&rsquo; 한쪽으로 못박지 않고 <strong>&lsquo;티쿤&rsquo;</strong>으로 음역합니다.
+        Temimah의 일은, 전통이 스스로 가리켰던 그 &lsquo;티쿤(원형)&rsquo;을 다시 본문으로 회복하는 것입니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- MAIN EVIDENCE TABLE -->
+  <section id="witnesses">
+    <div class="sec-head">
+      <span class="num">02</span>
+      <h2>증언 모음 — 랍비 문헌</h2>
+      <span class="he">עֵדֻיּוֹת</span>
+    </div>
+    <p class="lead">
+      각 권위자 이름·좌표를 클릭하면 Sefaria의 해당 원문으로 연결됩니다. 분류는 두 가지입니다 —
+      <span class="badge b-tikkun">TIKKUN</span> 서기관들의 티쿤(tiqqun soferim, 완곡 교정)을 인정·증언함 ·
+      <span class="badge b-none">NO MENTION</span> 해당 자료에는 본 절에 대한 직접 언급이 없음.
+    </p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>권위자</th>
+            <th>분류</th>
+            <th>발췌 (히브리어)</th>
+            <th>한국어 번역</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="auth"><a href="https://www.sefaria.org/Rashi_on_Genesis.18.22" target="_blank" rel="noopener">Rashi<span class="ext"> ↗</span></a></td>
+            <td><span class="badge b-tikkun">TIKKUN</span></td>
+            <td class="he"><b>ואברהם עודנו עומד לפני ה׳.</b> וַהֲלֹא לֹא הָלַךְ לַעֲמֹד לְפָנָיו, אֶלָּא הַקָּבָּ&quot;ה בָּא אֶצְלוֹ&hellip; אֶלָּא תִּקּוּן סוֹפְרִים הוּא זֶה.</td>
+            <td>&ldquo;아브라함이 여전히 주님 앞에 서 있었다&rdquo;고 하나, 아브라함이 (주님 앞에) 서려고 나아간 것이 아니라 도리어 거룩하신 분께서 그에게 오신 것이다. &hellip; 그러므로 이는 <strong>서기관들의 티쿤(tiqqun soferim)</strong>이다.</td>
+          </tr>
+          <tr>
+            <td class="auth"><a href="https://www.sefaria.org/Bereshit_Rabbah.48.6" target="_blank" rel="noopener">Bereshit Rabbah<span class="ext"> ↗</span></a></td>
+            <td><span class="badge b-tikkun">TIKKUN</span></td>
+            <td class="he">וְאַבְרָהָם עוֹדֶנּוּ עֹמֵד לִפְנֵי ה׳, אָמַר רַבִּי סִימוֹן תִּקּוּן סוֹפְרִים הוּא זֶה, שֶׁהַשְּׁכִינָה הָיְתָה מַמְתֶּנֶת לְאַבְרָהָם.</td>
+            <td>랍비 시몬이 말했다. &ldquo;이것은 서기관들의 티쿤이다. 곧 (아브라함이 주님 앞에 선 것이 아니라) 셰키나, 곧 하나님의 임재께서 아브라함을 떠나지 않으시고 그를 기다리고 계셨다는 뜻이다.&rdquo;</td>
+          </tr>
+          <tr>
+            <td class="auth"><a href="https://www.sefaria.org/Midrash_Tanchuma,_Lech_Lecha.19" target="_blank" rel="noopener">Tanchuma<span class="ext"> ↗</span></a><br /><span class="muted" style="font-size:.8em">(locus)</span></td>
+            <td><span class="badge b-tikkun">TIKKUN</span></td>
+            <td class="he">&hellip; וְאַבְרָהָם עוֹדֶנּוּ עֹמֵד לִפְנֵי ה׳ <small>(בראשית יח, כג)</small>, אֶלָּא שֶׁכִּנָּהוּ הַכָּתוּב.</td>
+            <td>&ldquo;아브라함이 여전히 주님 앞에 서 있었다&rdquo;(창 18장) — 그러나 이는 성경이 원래의 표현을 완곡하게 바꾸어 적은 것이다.</td>
+          </tr>
+          <tr>
+            <td class="auth"><a href="https://www.sefaria.org/Midrash_Tanchuma,_Beshalach.15" target="_blank" rel="noopener">Tanchuma<span class="ext"> ↗</span></a><br /><span class="muted" style="font-size:.8em">(18-list anchor)</span></td>
+            <td><span class="badge b-tikkun">TIKKUN</span></td>
+            <td class="he">&hellip; וְאַבְרָהָם עוֹדֶנּוּ עֹמֵד לִפְנֵי ה׳ <small>(בראשית יח, כג)</small>, אֶלָּא שֶׁכִּנָּהוּ הַכָּתוּב.</td>
+            <td>18개 완곡 수정 목록의 표제 단락에서 본 절을 그 첫 사례로 인용한다. &ldquo;&hellip; 이는 성경이 원표현을 완곡하게 바꾸어 적은 것이다.&rdquo;</td>
+          </tr>
+          <tr>
+            <td class="auth"><a href="https://www.sefaria.org/Midrash_Tanchuma_Buber,_Bereshit.3" target="_blank" rel="noopener">Tanchuma Buber<span class="ext"> ↗</span></a><br /><span class="muted" style="font-size:.8em">(locus)</span></td>
+            <td><span class="badge b-tikkun">TIKKUN</span></td>
+            <td class="he">אָמַר ר׳ סִימוֹן&hellip; וְאַבְרָהָם עוֹדֶנּוּ עוֹמֵד לִפְנֵי ה׳, לֹא הָיָה צָרִיךְ לוֹמַר אֶלָּא וְהָאֱלֹהִים עוֹדֶנּוּ עוֹמֵד, אֶלָּא תִּיקּוּן סוֹפְרִים הוּא.</td>
+            <td>랍비 시몬이 말했다. &ldquo;&lsquo;아브라함이 여전히 주님 앞에 서 있었다&rsquo;라고 되어 있으나, 본래는 &lsquo;하나님께서 여전히 (아브라함 앞에) 서 계셨다&rsquo;라고만 했어야 한다. 이것이 곧 서기관들의 티쿤이다.&rdquo;</td>
+          </tr>
+          <tr>
+            <td class="auth">Mekhilta DeRabbi Yishmael<br /><span class="muted" style="font-size:.8em">(locus)</span></td>
+            <td><span class="badge b-none">NO MENTION</span></td>
+            <td class="muted">&mdash;</td>
+            <td class="muted">이 자료에는 본 절을 직접 다룬 단락이 발견되지 않음.</td>
+          </tr>
+          <tr>
+            <td class="auth">Mekhilta DeRabbi Shimon b. Yochai<br /><span class="muted" style="font-size:.8em">(locus)</span></td>
+            <td><span class="badge b-none">NO MENTION</span></td>
+            <td class="muted">&mdash;</td>
+            <td class="muted">이 자료에는 본 절을 직접 다룬 단락이 발견되지 않음.</td>
+          </tr>
+          <tr>
+            <td class="auth">Sifrei Bamidbar<br /><span class="muted" style="font-size:.8em">(locus)</span></td>
+            <td><span class="badge b-none">NO MENTION</span></td>
+            <td class="muted">&mdash;</td>
+            <td class="muted">이 자료에는 본 절을 직접 다룬 단락이 발견되지 않음.</td>
+          </tr>
+          <tr>
+            <td class="auth">Sifrei Devarim<br /><span class="muted" style="font-size:.8em">(locus)</span></td>
+            <td><span class="badge b-none">NO MENTION</span></td>
+            <td class="muted">&mdash;</td>
+            <td class="muted">이 자료에는 본 절을 직접 다룬 단락이 발견되지 않음.</td>
+          </tr>
+          <tr>
+            <td class="auth">Midrash haGadol<br /><span class="muted" style="font-size:.8em">(Schechter, 1902)</span></td>
+            <td><span class="badge b-tikkun">TIKKUN</span></td>
+            <td class="he">&hellip; אִי רָאוּי לַמִּקְרָא לוֹמַר אֶלָּא וַה׳ עוֹדֶנּוּ עוֹמֵד לִפְנֵי אַבְרָהָם&hellip; אֶלָּא אָמַר ר׳ סִימוֹן תִּיקּוּן סוֹפְרִים זוֹ הָיְתָה.</td>
+            <td>&ldquo;본래 성경은 &lsquo;주님께서 여전히 아브라함 앞에 서 계셨다&rsquo;라고 했어야 마땅하다 &hellip;&rdquo; 그리고 랍비 시몬은 말했다. &ldquo;이것은 서기관들의 티쿤이었다.&rdquo;</td>
+          </tr>
+          <tr>
+            <td class="auth">Aaron ben Asher<br /><span class="muted" style="font-size:.8em">(Diqduqei §57)</span></td>
+            <td><span class="badge b-tikkun">TIKKUN</span></td>
+            <td class="he">שְׁמוֹנָה עָשָׂר דְּבָרִים כְּתוּבִים בַּתּוֹרָה וְאֵינָם כְּתוּבִים כְּתִיקּוּנָם.</td>
+            <td>&ldquo;열여덟 단어가 토라에 기록되어 있으나, 그것들은 본래 마땅한 형태(그 티쿤)대로 기록되어 있지 않다.&rdquo; — 곧 서기관들이 경외심에서 원래 표현을 완곡하게 고쳐 적은 자리들로, 본디 읽혀야 할 원형(티쿤)은 따로 존재한다.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- QERE RECONSTRUCTION -->
+  <section id="reconstruction">
+    <div class="sec-head">
+      <span class="num">03</span>
+      <h2>원형 재구성 — 증언과 근거</h2>
+      <span class="he">שִׁחְזוּר</span>
+    </div>
+    <div class="callout">
+      <div style="margin-bottom:.6rem"><strong>후보 원형</strong></div>
+      <div class="he" style="font-size:1.5rem; margin-bottom:.4rem">וַיהוָה עוֹדֶנּוּ עֹמֵד לִפְנֵי אַבְרָהָם</div>
+      <div style="color:var(--text-soft)">&ldquo;그리고 주님께서 아브라함 앞에 여전히 서 계셨다&rdquo;</div>
+      <hr style="border:none;border-top:1px solid var(--line);margin:1rem 0" />
+      <div style="font-size:.95rem;color:var(--text-soft);line-height:1.9">
+
+        <strong>티쿤 증언(TIKKUN)</strong> Rashi · Ben Asher · Midrash haGadol · Tanḥuma · Bereshit Rabbah<br />
+        <strong>근거</strong> 라쉬 명시 &ldquo;אֶלָּא תִּקּוּן סוֹפְרִים הוּא זֶה&rdquo; · Bereshit Rabbah 랍비 시몬 &ldquo;השכינה היתה ממתנת לאברהם&rdquo;
+      </div>
+    </div>
+  </section>
+
+  <!-- ANCIENT VERSIONS -->
+  <section id="versions">
+    <div class="sec-head">
+      <span class="num">04</span>
+      <h2>고대 역본 증언</h2>
+      <span class="he">תַּרְגּוּמִים</span>
+    </div>
+    <p class="lead">각 행은 실제 역본 본문의 <em>verbatim 부분 문자열 매칭</em>으로 판정했습니다.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>역본</th>
+            <th>판정</th>
+            <th>본문</th>
+            <th>한국어 번역</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="auth"><a href="https://www.sefaria.org/Onkelos_Genesis.18.22" target="_blank" rel="noopener">Targum Onkelos<span class="ext"> ↗</span></a></td>
+            <td><span class="badge b-ketiv"><span class="dot">🔴</span> MT(ketiv)</span></td>
+            <td class="he">&hellip; וְאַבְרָהָם עַד כְּעַן מְשַׁמֵּשׁ בִּצְלוֹ קֳדָם יְיָ׃</td>
+            <td>&hellip; 아브라함은 여전히 그곳에서 주님 앞에 서서 섬기고 있었다. <span class="muted">(주어 = 아브라함, MT ketiv와 동일)</span></td>
+          </tr>
+          <tr>
+            <td class="auth"><a href="https://www.sefaria.org/Targum_Jonathan_on_Genesis.18.22" target="_blank" rel="noopener">Pseudo-Jonathan<span class="ext"> ↗</span></a></td>
+            <td><span class="badge b-ketiv"><span class="dot">🔴</span> MT(ketiv)</span></td>
+            <td class="he">&hellip; וְאַבְרָהָם עַד כְּדוּן בָּעֵי רַחֲמִין עַל לוֹט וּמְשַׁמֵשׁ בִּצְלוֹ קֳדָם יְיָ׃</td>
+            <td>&hellip; 아브라함은 여전히 롯을 위해 자비를 구하며 주님 앞에서 섬기고 있었다. <span class="muted">(주어 = 아브라함)</span></td>
+          </tr>
+          <tr>
+            <td class="auth">Septuagint (LXX)<br /><span class="muted" style="font-size:.8em">(Brenton, 1851)</span></td>
+            <td><span class="badge b-ketiv"><span class="dot">🔴</span> MT(ketiv)</span></td>
+            <td style="font-family:var(--en-serif);font-size:1.05rem">Ἁβραὰμ δὲ ἔτι ἦν ἑστηκὼς ἐναντίον Κυρίου.</td>
+            <td>&ldquo;아브라함은 여전히 주님 앞에 서 있었다&rdquo; — 아브라함이 주격(주어), 주님은 속격 보어. MT ketiv와 동일.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="lead" style="margin-top:1rem;font-size:.9rem">
+      <strong>관찰</strong> — 세 역본(BC 3세기 LXX 포함)이 모두 <em>ketiv 형태</em>(아브라함이 주어)를 보존합니다.
+      이는 만약 원형이 &ldquo;주님께서 아브라함 앞에 서 계셨다&rdquo;였다면, 그 수정이
+      <strong>LXX 번역 이전에 이미 본문 전통에 자리잡고 있었음</strong>을 시사합니다.
+    </p>
+  </section>
+
+  <!-- MODERN CRITICAL SCHOLARSHIP -->
+  <section id="scholarship">
+    <div class="sec-head">
+      <span class="num">05</span>
+      <h2>근현대 본문비평 — 유대·기독교 학계</h2>
+      <span class="he">בִּקֹּרֶת הַנֻּסַּח</span>
+    </div>
+    <p class="lead">
+      이 자리는 티쿠네이 소페림의 <strong>첫 번째·대표 사례</strong>로, 1,800년 랍비 전승(베레시트 라바·탄후마 → 라쉬)에서
+      <strong>19세기 기독교 비평학(긴즈버그·맥클린톡)</strong>을 거쳐 <strong>20세기 단행본(매카시)</strong>에 이르기까지
+      유대·기독교 학계가 공히 다뤄 온 본문비평의 고전입니다.
+    </p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>학자 · 저작</th>
+            <th>진영</th>
+            <th>발췌 · 요지</th>
+            <th>한국어</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="auth">C. D. Ginsburg<br /><span class="muted" style="font-size:.8em">Introduction to the Massoretico-Critical Edition (London, 1897)</span></td>
+            <td><span class="badge b-acad">기독교 비평</span></td>
+            <td style="font-family:var(--en-serif);font-size:.95rem">&ldquo;&hellip;it was deemed derogatory to the Deity to say that the Lord stood before Abraham. Hence&hellip; the phrase was altered by the Sopherim.&rdquo;</td>
+            <td>&ldquo;주님이 아브라함 앞에 서 계셨다&rsquo;고 말하는 것은 신께 누가 된다고 여겨, 서기관(Sopherim)이 이 구를 고쳤다.&rdquo; — 개종한 유대인 출신의 마소라 학자.</td>
+          </tr>
+          <tr>
+            <td class="auth">McClintock &amp; Strong<br /><span class="muted" style="font-size:.8em">Cyclopaedia, s.v. &ldquo;Tikkun Sopherim&rdquo;</span></td>
+            <td><span class="badge b-acad">기독교 백과</span></td>
+            <td style="font-family:var(--en-serif);font-size:.93rem">&ldquo;&hellip;the original reading <span class="he" style="font-family:var(--he-serif)">עוֹדֶנּוּ עֹמֵד לִפְנֵי אַבְרָהָם</span>, &lsquo;and Jehovah still stood before Abraham,&rsquo; is now substituted&hellip; &lsquo;and Abraham still stood before Jehovah,&rsquo; because it appeared offensive to say that the Deity stood before Abraham.&rdquo;</td>
+            <td>&ldquo;원래 읽기는 &lsquo;주님께서 아직 아브라함 앞에 서 계셨다&rsquo;였으나, 신이 아브라함 앞에 선다는 말이 무엄해 보여 &lsquo;아브라함이 주님 앞에 선다&rsquo;로 고쳤다.&rdquo;</td>
+          </tr>
+          <tr>
+            <td class="auth">W. Emery Barnes<br /><span class="muted" style="font-size:.8em">JTS 1 (1900) 387–414</span></td>
+            <td><span class="badge b-acad">기독교 비평</span></td>
+            <td><em>&ldquo;Ancient Corrections in the Text of the Old Testament (Tikkun Sopherim)&rdquo;</em> &mdash; 영어권 최초의 본격 비평 연구. 본 절을 18선의 첫 자리로 다룬.</td>
+            <td>성공회 신학자. 티쿤을 후대 서기관의 실제 본문 교정으로 다룬다.</td>
+          </tr>
+          <tr>
+            <td class="auth">Carmel McCarthy<br /><span class="muted" style="font-size:.8em">The Tiqqune Sopherim (OBO 36; Freiburg/Göttingen, 1981)</span></td>
+            <td><span class="badge b-acad">기독교 학계</span></td>
+            <td>이 주제의 표준 단행본. 창 18:22를 신학적 교정의 대표 사례로 앞세워 분석하며, <em>원본 완곡어</em>와 <em>2차 신학적 수정</em>을 구별한다.</td>
+            <td>가톨릭 성서학자. 현대 티쿤 연구 책자.</td>
+          </tr>
+          <tr>
+            <td class="auth">Emanuel Tov<br /><span class="muted" style="font-size:.8em">Textual Criticism of the Hebrew Bible</span></td>
+            <td><span class="badge b-acad">현대 본문비평</span></td>
+            <td>티쿤들은 초기 사본·중세 사본에는 나타나지 않고 <em>마소라 주석 장치(아파라투스)</em>에만 보존되었다고 정리.</td>
+            <td>현대 본문비평의 표준 교과서.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="lead" style="margin-top:1rem;font-size:.9rem">
+      <strong>요지</strong> &mdash; 창 18:22의 수정(주어가 &lsquo;주님&rsquo;에서 &lsquo;아브라함&rsquo;으로 바뀜)은 유대 전승뿐 아니라
+      기독교 비평 학계에서도 150년 넘게 다뤄 온 본문비평의 고전입니다. 다만 이 주제는 본문 무오를 강조하는
+      대중 경건 주석서에서는 좌처럼 가려져 왔고, 그래서 찾아보지 않으면 &ldquo;없는 것처럼&rdquo; 보일 뿐입니다.
+    </p>
+  </section>
+
+  <!-- OUR WORK -->
+  <section id="our-work">
+    <div class="callout" style="border-left-color:var(--violet)">
+      <div class="sec-head" style="border:none;margin-bottom:.9rem;padding:0">
+        <span class="num">06</span>
+        <h2 style="font-size:1.4rem">우리의 일 — 티쿤을, 티쿤으로</h2>
+        <span class="he">תִּיקּוּן הַתִּיקּוּן</span>
+      </div>
+      <p style="margin:0;color:var(--text-soft);line-height:1.9">
+        히브리어가 더는 일상의 모국어가 아니던 유랑의 오랜 세월, 서기관들은 두려움과 경외 속에서 본문을 지켜냈습니다.
+        무엄해 보이는 표현 앞에서 그들은 &lsquo;티쿤(완곡한 고침)&rsquo;을 택했고, 동시에 <em>되돌려야 할 티쿤(원형)</em>이 따로 있음을 증언으로 남겼습니다.
+        <br />Temimah는 그 증언을 이어, 그들이 스스로 가리켰던 더 이른 원형으로 본문을 마저 회복합니다 —
+        <strong>고쳐 쓴 것을 회복하는 것, 곧 티쿤을 티쿤하는 일.</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- 06 — 시리즈 목록 (티쿠네이 소페림 18선) -->
+  <section id="series">
+    <div class="sec-head">
+      <span class="num">07</span>
+      <h2>티쿠네이 소페림 — 전체 목록</h2>
+      <span class="he">שְׁמוֹנָה עָשָׂר תִּיקּוּנִים</span>
+    </div>
+    <p class="lead">전통이 전하는 열여덟(+1)의 서기관 티쿤. 각 항목을 눌러 개별 연구로 들어갑니다. (절 목록 확정 후 나머지를 순차로 채웁니다.)</p>
+    <div class="idx-grid">
+      <a class="idx-card current" href="#intro">
+        <span class="idx-tag now">현재</span>
+        <span class="idx-num">01</span>
+        <div class="idx-ref">창세기 18:22</div>
+        <div class="idx-he">בְּרֵאשִׁית י״ח כ״ב</div>
+      </a>
+      <a class="idx-card" href="tiq_02_numbers_11_15.html">
+        <span class="idx-num">02</span>
+        <div class="idx-ref">민수기 11:15</div>
+        <div class="idx-he">בְּמִדְבַּר י״א ט״ו</div>
+      </a>
+      <div class="idx-card locked">
+        <span class="idx-tag soon">준비 중</span>
+        <span class="idx-num">03 – 19</span>
+        <div class="idx-ref">— 절 목록 확정 후 추가 —</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 — 18선 밖의 본문 변이 (placeholder) -->
+  <section id="variants">
+    <div class="sec-head">
+      <span class="num">08</span>
+      <h2>18선 밖의 본문 변이</h2>
+      <span class="he">חִילּוּפֵי נֻסְחָאוֹת</span>
+    </div>
+    <p class="lead">서기관 티쿤 18선에 들지 않으나 자음·모음 차원에서 검토가 필요한 본문들. (목록 준비 중)</p>
+    <div class="idx-grid">
+      <div class="idx-card locked">
+        <span class="idx-tag soon">준비 중</span>
+        <span class="idx-num">자음 오류</span>
+        <div class="idx-ref">— 사례 추가 예정 —</div>
+      </div>
+      <div class="idx-card locked">
+        <span class="idx-tag soon">준비 중</span>
+        <span class="idx-num">모음 오류</span>
+        <div class="idx-ref">— 사례 추가 예정 —</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="inner">
+    <div>
+      <h4>Temimah <span class="brand-he">תְּמִימָה</span></h4>
+      <p style="margin:.2rem 0 1rem;color:#9aa0b2">
+        A Holy Texts studio of Yerim Works Inc., Software Division.<br />
+        Toward the whole text — letter by letter, yod by stroke.
+      </p>
+    </div>
+    <div>
+      <h4>Sources</h4>
+      <a href="https://www.sefaria.org/Genesis.18.22" target="_blank" rel="noopener">Sefaria — Genesis 18:22 ↗</a>
+      <a href="https://www.sefaria.org/Rashi_on_Genesis.18.22" target="_blank" rel="noopener">Rashi on Genesis ↗</a>
+      <a href="https://www.sefaria.org/Bereshit_Rabbah.48.6" target="_blank" rel="noopener">Bereshit Rabbah ↗</a>
+    </div>
+    <div>
+      <h4>Yerim Works</h4>
+      <a href="https://yerimworks.com/#holy-texts" target="_blank" rel="noopener">Holy Texts ↗</a>
+      <a href="https://yerimworks.com/software.html" target="_blank" rel="noopener">Software Division ↗</a>
+      <a href="mailto:teamsoft@yerimworks.com">teamsoft@yerimworks.com</a>
+    </div>
+  </div>
+  <div class="legal">
+    히브리어·아람어 원문 및 출처 표기는
+    <a href="https://www.sefaria.org" target="_blank" rel="noopener">Sefaria.org</a>로 딥링크합니다.
+    Sefaria의 본문은 판본별 라이선스(Public Domain / CC0 / CC-BY 등)를 따르며, 본 페이지는 원문을 재호스팅하지 않고
+    출처로 연결합니다. LXX 본문은 Brenton(1851, Public Domain).
+    &copy; 2026 Yerim Works Inc. (예림웍스 주식회사) · Temimah. 해설·번역·편집 부분에 한함.
+  </div>
+</footer>
+
+</body>
+</html>
