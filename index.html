@@ -400,6 +400,107 @@
     }
     .footer-bar p { color: var(--muted); font-size: 0.76rem; }
 
+    /* ── HOLY TEXTS (Masoret) ── */
+    .holytexts {
+      border-top: 1px solid var(--border);
+      background:
+        radial-gradient(ellipse 60% 50% at 50% 0%, rgba(59,130,246,0.07) 0%, transparent 70%),
+        var(--bg);
+      padding: 96px 64px;
+      position: relative; overflow: hidden;
+    }
+    .ht-inner {
+      max-width: 1100px; margin: 0 auto;
+      position: relative; z-index: 1;
+    }
+    .ht-eyebrow {
+      display: inline-flex; align-items: center; gap: 9px;
+      padding: 6px 15px;
+      background: rgba(59,130,246,0.1);
+      border: 1px solid rgba(59,130,246,0.28);
+      border-radius: 100px;
+      font-size: 0.66rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--blue); margin-bottom: 26px;
+    }
+    .ht-eyebrow .dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--blue); animation: pulse 2s ease-in-out infinite;
+    }
+    .ht-head {
+      display: flex; align-items: baseline; gap: 18px;
+      flex-wrap: wrap; margin-bottom: 8px;
+    }
+    .ht-hebrew {
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 800; letter-spacing: -0.01em;
+      color: var(--text); line-height: 1;
+      direction: rtl;
+    }
+    .ht-title {
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      font-weight: 900; letter-spacing: -0.03em;
+      line-height: 1.08;
+      background: linear-gradient(145deg, #fff 45%, rgba(255,255,255,0.5));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 22px;
+    }
+    .ht-lead {
+      font-size: 1.05rem; color: var(--text);
+      line-height: 1.8; max-width: 720px; margin-bottom: 20px;
+    }
+    .ht-lead strong { color: #fff; font-weight: 600; }
+    .ht-body {
+      font-size: 0.94rem; color: var(--muted);
+      line-height: 1.85; max-width: 720px; margin-bottom: 18px;
+    }
+    .ht-verse {
+      border-left: 2px solid rgba(59,130,246,0.5);
+      padding: 4px 0 4px 22px;
+      margin: 30px 0;
+      max-width: 680px;
+    }
+    .ht-verse p {
+      font-size: 1rem; color: var(--text);
+      line-height: 1.7; font-style: italic;
+    }
+    .ht-verse cite {
+      display: block; margin-top: 8px;
+      font-size: 0.78rem; color: var(--muted);
+      font-style: normal; letter-spacing: 0.04em;
+    }
+    .ht-stats {
+      display: flex; gap: 48px; flex-wrap: wrap;
+      margin: 40px 0 44px;
+    }
+    .ht-stat .num {
+      font-size: 2.2rem; font-weight: 900; letter-spacing: -0.04em;
+      background: linear-gradient(135deg, #fff, rgba(255,255,255,0.55));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; line-height: 1;
+    }
+    .ht-stat .lbl {
+      font-size: 0.7rem; font-weight: 600; letter-spacing: 0.07em;
+      text-transform: uppercase; color: var(--muted); margin-top: 7px;
+    }
+    .ht-apps {
+      display: flex; flex-wrap: wrap; gap: 9px; margin-bottom: 34px;
+    }
+    .ht-app {
+      padding: 7px 16px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      font-size: 0.8rem; font-weight: 500; color: var(--text);
+    }
+    .ht-app span { color: var(--muted); font-size: 0.72rem; }
+    .ht-foot {
+      font-size: 0.82rem; color: var(--muted);
+      letter-spacing: 0.02em;
+    }
+    .ht-foot strong { color: var(--text); font-weight: 600; }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
       nav { padding: 16px 24px; }
@@ -409,6 +510,8 @@
       .divisions { padding: 40px 24px 80px; }
       .cards { grid-template-columns: 1fr; }
       .about { padding: 64px 24px; flex-direction: column; }
+      .holytexts { padding: 72px 24px; }
+      .ht-stats { gap: 30px; }
       footer { padding: 56px 24px 0; }
       .footer-bar { margin: 40px 24px 0; }
     }
@@ -426,6 +529,7 @@
   <a class="nav-logo" href="#">Yerim<em>Works</em> Inc.</a>
   <ul>
     <li><a href="#divisions">Divisions</a></li>
+    <li><a href="#holy-texts">Holy Texts</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a class="nav-cta" href="software.html">Software Store →</a></li>
@@ -484,6 +588,7 @@
         <span class="tag">Mobile Web</span>
         <span class="tag">Code Review</span>
         <span class="tag">App Migration</span>
+        <span class="tag">Holy Texts · Masoret</span>
         <span class="tag">Maintenance</span>
       </div>
       <div class="cta-link">
@@ -558,6 +663,77 @@
   </div>
 </section>
 
+<!-- HOLY TEXTS · MASORET (Software Division) -->
+<section class="holytexts" id="holy-texts">
+  <div class="ht-inner">
+    <span class="ht-eyebrow">
+      <span class="dot"></span>
+      Software Division · Holy Texts
+    </span>
+
+    <div class="ht-head">
+      <span class="ht-hebrew">מָסוֹרֶת</span>
+    </div>
+    <h2 class="ht-title">Masoret — Where Every Letter Counts.</h2>
+
+    <p class="ht-lead">
+      In 2026, Yerim Works welcomed <strong>Yerimsoft</strong> (예림소프트) into our Software
+      Division — a studio that spent <strong>13 years</strong> building Scripture apps trusted
+      by readers around the world. Their craft now continues here, under the
+      <strong>Masoret</strong> imprint.
+    </p>
+
+    <p class="ht-body">
+      We work at one of the most sensitive seams in religious publishing: faithfully
+      presenting the Hebrew Bible (Tanakh) without diminishing Jewish identity, while
+      remaining respectful to Christian readers. Few people realise that the chapter-
+      and verse-divisions of the Hebrew text differ from common Christian translations
+      in close to <strong>1,200 places</strong>. Rather than hide those differences, we make
+      them transparent — honoring the integrity of the Masoretic text while respecting
+      every reader's tradition.
+    </p>
+
+    <div class="ht-verse">
+      <p>"For truly I say to you, until heaven and earth pass away, not one yod, not
+        one stroke of a letter, will pass from the Torah."</p>
+      <cite>— Matthew 5:18</cite>
+    </div>
+
+    <p class="ht-body">
+      That conviction guides our scholarship. Where centuries of transmission left
+      scribal traces — such as the well-known reading at <strong>Genesis 18:22</strong> — we
+      study, document, and let the text speak for itself, letter by letter, jot by tittle.
+    </p>
+
+    <div class="ht-stats">
+      <div class="ht-stat">
+        <div class="num">13</div>
+        <div class="lbl">Years of Craft</div>
+      </div>
+      <div class="ht-stat">
+        <div class="num">~1,200</div>
+        <div class="lbl">Versification Bridges</div>
+      </div>
+      <div class="ht-stat">
+        <div class="num">2</div>
+        <div class="lbl">Traditions Honored</div>
+      </div>
+    </div>
+
+    <div class="ht-apps">
+      <span class="ht-app">Shalom Tanach <span>שלום תנ״ך</span></span>
+      <span class="ht-app">Woorimal <span>우리말통독성경</span></span>
+      <span class="ht-app">Hebrew Audio Bible</span>
+      <span class="ht-app">Multilingual Scriptures</span>
+    </div>
+
+    <p class="ht-foot">
+      <strong>Masoret</strong> is a Holy Texts studio of Yerim Works Inc., Software Division.
+      Formerly Yerimsoft (예림소프트 / yearimsoft).
+    </p>
+  </div>
+</section>
+
 <!-- ABOUT -->
 <section class="about" id="about">
   <div class="about-copy">
@@ -608,6 +784,7 @@
     <h4>Divisions</h4>
     <ul>
       <li><a href="software.html">Software</a></li>
+      <li><a href="#holy-texts">Holy Texts · Masoret</a></li>
       <li><a href="#divisions">Building Management</a></li>
       <li><a href="#divisions">Cosmetics</a></li>
     </ul>
